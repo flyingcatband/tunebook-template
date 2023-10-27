@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 800;
+}
+
+h1 {
+	@apply text-3xl text-center;
+}
+
+h2 {
+	@apply text-2xl;
+}
+
+button {
+	@apply cursor-pointer bg-[#fed700] px-2.5 py-1.5 font-semibold tracking-wide hover:bg-opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fed700];
+}
+
+body {
+	@apply accent-[#fed700] touch-pan-y my-4;
+}
+
+.set-preview {
+	@apply ring-[#fed700] ring-4;
+}

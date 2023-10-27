@@ -1,0 +1,13 @@
+X: 1
+T: The Cliffs Of Moher
+R: jig
+N: Here's a note in a tune's ABC N: field
+N: You might use this for instrumentation or arrangement notes for a specific tune
+M: 6/8
+L: 1/8
+K: Ador
+e|"Am"a2a bag| eaf ged| "C"c2A BAG| "Em7"EFG ABd|
+"Fmaj7"eaa bag| eaf ged|"G"c2A BAG|1EFG A2:|2EFG A3||
+|:~"Am"e3 dBA|"C" ~e3 dBA| "G"GAB dBA| GAB "Em7"dBd|
+[1~"Am"e3 dBA| "Fmaj7"~e3 dBA| "Em7"GAB dBA| "D"EFG A3:|
+[2 "Fmaj7"~e3 ded| cdc BAG| "G"EFG BAG| "E/G# (l.t. Am)"ED[BB,] [A3A,3]||
