@@ -1,4 +1,4 @@
-import { generateFolderFromLatex } from '@flyingcatband/tunebook';
+import { generateFolderFromLatex } from '@flyingcatband/tunebook/server';
 import { json } from '@sveltejs/kit';
 
 export const prerender = true;
