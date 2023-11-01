@@ -9,5 +9,5 @@
 	<title>MyTunebook</title>
 </svelte:head>
 
-<h1>Welcome to MyTunebook</h1>
+<h1 class="mt-3">Welcome to MyTunebook</h1>
 <FilterableSetsGrid folder={data.folder} tuneFont="My Custom Font" />

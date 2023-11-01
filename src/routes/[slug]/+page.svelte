@@ -8,4 +8,8 @@
 </svelte:head>
 
 <button class="z-10 fixed left-2" on:click={() => history.back()}>Back</button>
-<ViewSet set={data.set} fontFamily="My Custom Font" />
+<ViewSet set={data.set} fontFamily="My Custom Font">
+	{#each data.set.notes as note}
+		<p class="italic">{note}</p>
+	{/each}
+</ViewSet>
