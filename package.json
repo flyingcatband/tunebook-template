@@ -30,7 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@flyingcatband/tunebook": "^0.0.8",
+		"@flyingcatband/tunebook": "^0.0.10",
 		"svelte": "^4.2.2"
 	}
 }
