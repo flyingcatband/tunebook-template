@@ -11,6 +11,6 @@ export async function load({ parent, params: { slug } }: PageLoadEvent): Promise
 	if (set) {
 		return { set };
 	} else {
-		throw error(404, 'Set not found');
+		error(404, 'Set not found');
 	}
 }
