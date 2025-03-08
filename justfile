@@ -27,3 +27,4 @@ format:
 # Run static analysis on the code
 lint:
     pnpm lint
+    pnpm check
