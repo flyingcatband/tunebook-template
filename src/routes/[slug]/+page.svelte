@@ -12,6 +12,7 @@
 	displayAbcFields="TNC"
 	folderName={data.folder.name}
 	fontFamily="My Custom Font"
+	showClefSwitcher
 >
 	{#each data.set.notes as note (note)}
 		<p class="italic">{note}</p>
