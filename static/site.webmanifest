@@ -1,0 +1,13 @@
+{
+	"name": "MyTunebook",
+	"icons": [
+		{
+			"src": "/favicon.png",
+			"sizes": "250x250",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#fed700",
+	"background_color": "#fed700",
+	"display": "standalone"
+}
