@@ -30,6 +30,8 @@ At some point, we'll automate this, but for now, find and replace is your friend
 
 ## Deployment
 
+There's a service worker included by default. This means you can see your tunes offline, but can sometimes cause problems when refreshing. If you don't want this, delete `src/service-worker.js` BEFORE you deploy the site for the first time.
+
 By default, this template makes a site that search engines can't index. This means you won't be able to Google for your own folder, you'll have to go straight to it's web address. This is defined in `src/app.html` if you really want to change it, but think carefully about the possibility of sharing copyrighted data on the open internet.
 
 You can deploy the site anywhere you can deploy static sites. We like [Cloudflare pages](https://pages.cloudflare.com/), but Netlify, Vercel, Render or a raspberry pi running a file server would all work fine.
