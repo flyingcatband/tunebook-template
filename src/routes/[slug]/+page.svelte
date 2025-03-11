@@ -6,7 +6,12 @@
 <svelte:head>
 	<title>{data.set.name} | MyTunebook</title>
 </svelte:head>
-<button class="z-10 fixed left-2" onclick={() => history.back()}>Back</button>
+
+<nav>
+	<a class="button" href="/">All sets</a>
+	<a class="button" href="/{data.set.previousSlug}">Previous set</a>
+	<a class="button" href="/{data.set.nextSlug}">Next set</a>
+</nav>
 <ViewSet
 	set={data.set}
 	displayAbcFields="TNC"

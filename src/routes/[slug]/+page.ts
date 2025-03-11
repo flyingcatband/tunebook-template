@@ -1,9 +1,8 @@
 import type { PageLoadEvent } from './$types.js';
-import type { Set } from '@flyingcatband/tunebook/types';
 import { error } from '@sveltejs/kit';
 
 // this is where the site loads the data for a specific set
-export async function load({ parent, params: { slug } }: PageLoadEvent): Promise<{ set: Set }> {
+export async function load({ parent, params: { slug } }: PageLoadEvent) {
 	const data = await parent();
 	const set = data.folder.content
 		.flatMap((section) => section.content)
