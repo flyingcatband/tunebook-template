@@ -32,3 +32,7 @@ body {
 .set-preview {
 	@apply ring-[#fed700] ring-4;
 }
+
+li.tag {
+	@apply border-[#fed700] border-2 px-1 py-0.5 text-sm font-semibold;
+}
