@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html {
+	font-family: 'My Custon Font', sans-serif;
+	--set-preview-width: 20rem;
+	--accent-color: #fed700;
+	--text-on-accent: #000000;
+	accent-color: var(--accent-color);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	touch-action: pan-y;
+}
 
 h1,
 h2,
@@ -8,31 +18,62 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 800;
+	font-weight: bold;
 }
 
 h1 {
-	@apply text-3xl text-center;
+	font-size: 1.875rem;
+	text-align: center;
 }
 
 h2 {
-	@apply text-2xl;
+	font-size: 1.5rem;
 }
 
 button,
 .button {
-	@apply cursor-pointer bg-[#fed700] px-2.5 py-1.5 font-semibold tracking-wide hover:bg-opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fed700];
-	@apply disabled:opacity-50 disabled:cursor-not-allowed;
+	cursor: pointer;
+	background-color: var(--accent-color);
+	color: var(--text-on-accent);
+	padding: 0.485rem 0.625rem;
+	font-weight: bold;
+	border-radius: 0.375rem;
+	border: none;
 }
 
-body {
-	@apply accent-[#fed700] touch-pan-y;
+button:hover,
+.button:hover {
+	opacity: 80%;
 }
 
-.set-preview {
-	@apply ring-[#fed700] ring-4;
+button:disabled,
+.button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
 }
 
-li.tag {
-	@apply border-[#fed700] border-2 px-1 py-0.5 text-sm font-semibold;
+button:focus-visible,
+.button:focus-visible,
+select:focus-visible {
+	outline: 2px solid var(--accent-color);
+	outline-offset: 2px;
+}
+
+a.button {
+	text-decoration: none;
+}
+
+/* iOS selects use the accent color as the text color
+if your accent color is eg yellow, this makes selects unreadable */
+select {
+	accent-color: black;
+}
+
+nav {
+	position: fixed;
+	z-index: 20;
+	left: 0.75rem;
+	top: 0.75rem;
+	display: flex;
+	gap: 0.6rem;
 }

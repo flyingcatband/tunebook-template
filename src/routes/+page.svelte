@@ -8,6 +8,6 @@
 	<title>MyTunebook</title>
 </svelte:head>
 
-<h1 class="mt-3">Welcome to MyTunebook</h1>
+<h1>Welcome to MyTunebook</h1>
 <GlobalTranspositionButtons showClefSwitcher />
 <FilterableSetsGrid folder={data.folder} tuneFont="My Custom Font" />
