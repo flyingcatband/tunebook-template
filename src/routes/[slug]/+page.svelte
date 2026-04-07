@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ViewSet } from '@flyingcatband/tunebook';
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 
 	let { data } = $props();
 </script>
@@ -10,9 +10,9 @@
 </svelte:head>
 
 <nav>
-	<a class="button" href="/{base}">All sets</a>
-	<a class="button" href="/{base}/{data.set.previousSlug}">Previous set</a>
-	<a class="button" href="/{base}/{data.set.nextSlug}">Next set</a>
+	<a class="button" href={resolve('/')}>All sets</a>
+	<a class="button" href={resolve('/[slug]', { slug: data.set.previousSlug })}>Previous set</a>
+	<a class="button" href={resolve('/[slug]', { slug: data.set.nextSlug })}>Next set</a>
 </nav>
 <ViewSet
 	set={data.set}
