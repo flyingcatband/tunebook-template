@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@flyingcatband/tunebook':
-        specifier: ^0.13.1
-        version: 0.13.1
+        specifier: ^0.15.0
+        version: 0.15.0(@sveltejs/kit@2.56.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.6(@types/node@25.5.2)(jiti@1.21.7)(yaml@2.7.0)))(svelte@5.55.1)(typescript@6.0.2)(vite@8.0.6(@types/node@25.5.2)(jiti@1.21.7)(yaml@2.7.0)))
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.4
@@ -109,8 +109,13 @@ packages:
     resolution: {integrity: sha512-ejvBr8MQCbVsWNZnCwDXjUKq40MDmHalq7cJ6e9s/qzTUFIIo/afzt1Vui9T97FM/V/pN4YsFVoed5NIa96RDg==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@flyingcatband/tunebook@0.13.1':
-    resolution: {integrity: sha512-99KBQ63UlDve+SvIVQ4Iia7ID91ZBG2hW8iKCpFBfj5W1cWUBqV9PtCmVU4dcXbC8gEVvADSGu2ar5/wfzmohA==}
+  '@flyingcatband/tunebook@0.15.0':
+    resolution: {integrity: sha512-NtC3i9wF4mn1Su9za2AFcY+z6nWIay/xwgQq4BqvSxDwASQZAd4UuhIAl5GIxuHFwFTCAHI6+Of9nRKf8Po0bw==}
+    peerDependencies:
+      '@sveltejs/kit': ^2.0.0
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -460,8 +465,8 @@ packages:
   devalue@5.7.0:
     resolution: {integrity: sha512-qCvc8m7cImp1QDCsiY+C2EdSBWSj7Ucfoq87scSdYboDiIKdvMtFbH1U2VReBls6WMhMaUOoK3ZJEDNG/7zm3w==}
 
-  drab@6.5.1:
-    resolution: {integrity: sha512-uoClqjTwdG0H3qZQa3HUN6ctWIbA/8vheUqLNYnttW4amnRVnFQM1wTDgT/ddBf7CF+JW0cDx6oohrBT2Qc9/A==}
+  drab@7.0.3:
+    resolution: {integrity: sha512-pRdc4mCLkd5BSb0w3jIIB7Pqotj8XPlH4q9+Rffed22uVgg7+hkk6FJ7zgWh4sXxBuC5p0L+e9NFZDU6hsBuzw==}
 
   electron-to-chromium@1.5.332:
     resolution: {integrity: sha512-7OOtytmh/rINMLwaFTbcMVvYXO3AUm029X0LcyfYk0B557RlPkdpTpnH9+htMlfu5dKwOmT0+Zs2Aw+lnn6TeQ==}
@@ -902,6 +907,10 @@ packages:
       svelte:
         optional: true
 
+  svelte@5.39.11:
+    resolution: {integrity: sha512-8MxWVm2+3YwrFbPaxOlT1bbMi6OTenrAgks6soZfiaS8Fptk4EVyRIFhJc3RpO264EeSNwgjWAdki0ufg4zkGw==}
+    engines: {node: '>=18'}
+
   svelte@5.55.1:
     resolution: {integrity: sha512-QjvU7EFemf6mRzdMGlAFttMWtAAVXrax61SZYHdkD6yoVGQ89VeyKfZD4H1JrV1WLmJBxWhFch9H6ig/87VGjw==}
     engines: {node: '>=18'}
@@ -1080,13 +1089,15 @@ snapshots:
       '@eslint/core': 1.2.0
       levn: 0.4.1
 
-  '@flyingcatband/tunebook@0.13.1':
+  '@flyingcatband/tunebook@0.15.0(@sveltejs/kit@2.56.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.6(@types/node@25.5.2)(jiti@1.21.7)(yaml@2.7.0)))(svelte@5.55.1)(typescript@6.0.2)(vite@8.0.6(@types/node@25.5.2)(jiti@1.21.7)(yaml@2.7.0)))':
     dependencies:
       abcjs: 6.6.2
-      drab: 6.5.1
+      drab: 7.0.3
       esm-env: 1.2.2
       slugify: 1.6.9
-      svelte: 5.55.1
+      svelte: 5.39.11
+    optionalDependencies:
+      '@sveltejs/kit': 2.56.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.6(@types/node@25.5.2)(jiti@1.21.7)(yaml@2.7.0)))(svelte@5.55.1)(typescript@6.0.2)(vite@8.0.6(@types/node@25.5.2)(jiti@1.21.7)(yaml@2.7.0))
 
   '@humanfs/core@0.19.1': {}
 
@@ -1403,7 +1414,7 @@ snapshots:
 
   devalue@5.7.0: {}
 
-  drab@6.5.1: {}
+  drab@7.0.3: {}
 
   electron-to-chromium@1.5.332: {}
 
@@ -1807,6 +1818,23 @@ snapshots:
       semver: 7.7.4
     optionalDependencies:
       svelte: 5.55.1
+
+  svelte@5.39.11:
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      '@jridgewell/sourcemap-codec': 1.5.5
+      '@sveltejs/acorn-typescript': 1.0.9(acorn@8.16.0)
+      '@types/estree': 1.0.8
+      acorn: 8.16.0
+      aria-query: 5.3.1
+      axobject-query: 4.1.0
+      clsx: 2.1.1
+      esm-env: 1.2.2
+      esrap: 2.2.4
+      is-reference: 3.0.3
+      locate-character: 3.0.0
+      magic-string: 0.30.21
+      zimmerframe: 1.1.4
 
   svelte@5.55.1:
     dependencies:
