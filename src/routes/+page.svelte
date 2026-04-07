@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { FilterableSetsGrid, GlobalTranspositionButtons } from '@flyingcatband/tunebook';
-	import { base } from '$app/paths';
-	const baseWithTrailingSlash = base.endsWith('/') ? base : `${base}/`;
+	import { resolve } from '$app/paths';
+	const baseWithTrailingSlash = resolve('/');
 	let { data } = $props();
 </script>
 
